@@ -160,7 +160,7 @@ public class ChatService {
     }
 
     private Boolean isAdmin(UUID userId) throws UserHaveNoPermissions {
-        repository.findUserById(userId)
+        User user = repository.findUserById(userId);
 
         if(user == null)
             throw new UserNotFoundException("You have to register up at first");
