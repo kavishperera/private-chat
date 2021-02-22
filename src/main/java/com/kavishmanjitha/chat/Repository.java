@@ -27,7 +27,7 @@ public class Repository {
     }
 
     public User findUserByName(String userName) {
-        users.values()
+        Collection<User> allUsers = users.values();
         for(User user : allUsers) {
             if(user.getUserName().equals(userName)) {
                 return user;
