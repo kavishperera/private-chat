@@ -10,13 +10,13 @@
         <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kavishmanjitha</groupId>
-    <artifactId>bsa-chat-back</artifactId>
+    <artifactId>private-chat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bsa-chat-back</name>
-    <description>Back-end application for BSA React chat</description>
+    <name>private-chat</name>
+    <description></description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>

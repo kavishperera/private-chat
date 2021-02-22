@@ -1,6 +1,5 @@
 package com.kavishmanjitha.chat;
 
-import lombok.var;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -28,7 +27,7 @@ public class Repository {
     }
 
     public User findUserByName(String userName) {
-        var allUsers = users.values();
+        users.values()
         for(User user : allUsers) {
             if(user.getUserName().equals(userName)) {
                 return user;

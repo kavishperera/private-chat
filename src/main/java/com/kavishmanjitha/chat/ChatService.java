@@ -3,7 +3,6 @@ package com.kavishmanjitha.chat;
 import com.kavishmanjitha.chat.exception.UserHaveNoPermissions;
 import com.kavishmanjitha.chat.exception.UserNotFoundException;
 import com.kavishmanjitha.chat.exception.UserValidationException;
-import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -105,7 +104,7 @@ public class ChatService {
     }
 
     public User login(String userName, String password) {
-        var tempUser = repository.findUserByName(userName);
+        User tempUser = repository.findUserByName(userName);
 
         if(tempUser != null) {
             if(tempUser.getPassword().equals(password)) {
@@ -153,7 +152,7 @@ public class ChatService {
     }
 
     private Boolean isLogged(UUID userId) throws UserNotFoundException {
-        var user = repository.findUserById(userId);
+        User user = repository.findUserById(userId);
         if(user == null) {
             throw new UserNotFoundException("You have to register up at first");
         }
@@ -161,7 +160,7 @@ public class ChatService {
     }
 
     private Boolean isAdmin(UUID userId) throws UserHaveNoPermissions {
-        var user = repository.findUserById(userId);
+        repository.findUserById(userId)
 
         if(user == null)
             throw new UserNotFoundException("You have to register up at first");

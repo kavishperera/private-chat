@@ -1,6 +1,5 @@
 package com.kavishmanjitha.chat;
 
-import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +22,7 @@ public class ChatController {
 
     @PostMapping("/message/edit") //TODO: here incorrect checking for null. fix it
     public ResponseEntity<?> editOrAddMessage(@RequestBody Message message) {
-        var responseMessage = chatService.editOrAddMessage(message.getUserId(), message);
+        Message responseMessage = chatService.editOrAddMessage(message.getUserId(), message);
 
         if(responseMessage == null) {
             //return new ResponseEntity<>(Map.of("error", "This user is not logged in"), HttpStatus.FORBIDDEN);
